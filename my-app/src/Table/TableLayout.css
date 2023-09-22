@@ -1,0 +1,97 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700&family=Nunito:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,600;1,700&family=Oswald:wght@300&family=Poppins:wght@200;300;400;600;700&family=Roboto:ital,wght@0,100;0,300;0,400;0,900;1,100;1,300;1,400;1,500;1,900&display=swap");
+body {
+  position: relative;
+  height: 100vh;
+  width: 100vw;
+}
+.container {
+  display: grid;
+  height: 90vh;
+  width: 60vw;
+  grid-template-columns: 1.5fr 0.5fr 1fr 1fr;
+  grid-template-rows: 0.2fr 2.5fr 1fr;
+  grid-template-areas:
+    "box1 box2 box2 box2 "
+    "box3 box3 box4 box4"
+    "box5 box5 box5 box5 ";
+  font-family: "Poppins", sans-serif;
+  place-content: center;
+  position: absolute;
+  top: 10%;
+  left: 20%;
+}
+.box {
+  border: 1px solid black;
+  padding: 25px;
+  font-size: 15px;
+  font-weight: bold;
+}
+.box1 {
+  grid-area: box1;
+  text-align: center;
+  border-top: 2px solid black;
+  border-left: 2px solid black;
+}
+.box2 {
+  grid-area: box2;
+  text-align: end;
+  border-top: 2px solid black;
+  border-right: 2px solid black;
+}
+.box3 {
+  grid-area: box3;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-left: 2px solid black;
+}
+.box4 {
+  grid-area: box4;
+  border-right: 2px solid black;
+}
+.box5 {
+  grid-area: box5;
+  text-align: start;
+  padding-top: 50px;
+  border-left: 2px solid black;
+  border-right: 2px solid black;
+  border-bottom: 2px solid black;
+}
+@media (max-width:640px){
+  .container{
+    width: 500px;
+    height: 400px;
+    position: absolute;
+    top: 20%;
+    left: 6%;
+  }
+  .box{
+    font-size: 12px;
+  }
+}
+@media (max-width:580px){
+  .container{
+    width: 450px;
+    height: 400px;
+    position: absolute;
+    top: 20%;
+    left: 10%;
+
+  }
+  .box{
+    font-size: 12px;
+  }
+}
+@media (max-width:468px){
+  .container{
+    width: 300px;
+    height: 400px;
+    position: absolute;
+    top: 10%;
+    left: 6%;
+
+  }
+  .box{
+    font-size: 10px;
+  }
+}
